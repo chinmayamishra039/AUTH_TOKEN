@@ -10,6 +10,7 @@ app.get("/", async (req, res, next) => {
   res.send("Hello from express");
 });
 app.use("/auth", AuthRoute);
+app.use(morgan(dev))
 // creation of error if no route found
 app.use(async (req, res, next) => {
   //error obj createad
